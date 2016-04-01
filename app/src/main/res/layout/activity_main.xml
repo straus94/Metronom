@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.test.metronom.MainActivity"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_manual_mode"
+        android:text="@string/manual_mode"
+        android:layout_marginTop="64dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        style="@style/textViewStyle"/>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/background_footer"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/vibration"
+            style="@style/changeMode">
+            <ImageView
+                android:id="@+id/vibration_image"
+                style="@style/imageChangeMode"
+                android:src="@drawable/vb"/>
+            <TextView
+                android:id="@+id/tv_vibration"
+                style="@style/textChangeMode"
+                android:text="@string/tv_vibration" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fi"
+            style="@style/changeMode">
+            <ImageView
+                android:id="@+id/fi_image"
+                style="@style/imageChangeMode"
+                android:src="@drawable/fi"/>
+            <TextView
+                android:id="@+id/tv_fi"
+                style="@style/textChangeMode"
+                android:text="@string/tv_flash"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sound"
+            style="@style/changeMode">
+            <ImageView
+                android:id="@+id/volume_image"
+                style="@style/imageChangeMode"
+                android:src="@drawable/sound"/>
+            <TextView
+                android:id="@+id/tv_sound"
+                style="@style/textChangeMode"
+                android:text="@string/tv_sound"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_set_bpm"
+        style="@style/textViewStyle"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/tv_set_bpm"/>
+
+    <TextView
+        android:id="@+id/tv_bpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_bpm"
+        android:textSize="24dp"
+        android:textColor="@color/standart"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus_black_24dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/white"
+            android:onClick="changeMinus"
+            android:longClickable="true"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:max="320"
+            android:progress="100"/>
+
+        <ImageButton
+            android:id="@+id/btn_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_plus_black_24dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/white"
+            android:onClick="changePlus"
+            android:layout_height="wrap_content"
+            android:longClickable="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_indicator"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"/>
+
+    <View
+        android:id="@+id/view_indicator"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/indicator"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:background="@color/background_footer"
+        android:layout_gravity="center"
+        android:text="@string/btn_start"
+        android:onClick="clickStart"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+</LinearLayout>

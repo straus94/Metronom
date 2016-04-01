@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Metronom</string>
+    <string name="manual_mode">manual mode</string>
+    <string name="tv_vibration">vibration</string>
+    <string name="tv_flash">flash</string>
+    <string name="tv_sound">sound</string>
+    <string name="tv_set_bpm">set bpm you need below</string>
+    <string name="tv_bpm">bpm</string>
+    <string name="tv_indicator">indicator</string>
+    <string name="btn_start">start</string>
+</resources>
